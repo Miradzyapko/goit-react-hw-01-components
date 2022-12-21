@@ -8,7 +8,16 @@ import { TransactionHistory } from "./TransactionHistory/TransactionHistory";
 import transactions from "./TransactionHistory/transactions";
 export const App = () => {
   return (
-    <div>
+    <div
+     style={{
+      alignItems: 'center',
+      backgroundColor: "bisque" ,
+      display: 'flex',
+      flexDirection: 'column',
+      margin: 'auto',
+      maxWidth: '1170px',
+      padding: '15px',
+    }}> 
       <Profile username={user.username}
   tag={user.tag}
   location={user.location}
@@ -19,9 +28,9 @@ export const App = () => {
   
   
 <Statistics title="Upload stats" stats={data} />
-<Statistics stats={data} />
-<FriendList friends={friends} />;
-<TransactionHistory items={transactions} />;
+ 
+<FriendList friends={friends} />
+<TransactionHistory items={transactions} />
 </div>
   );
 };
